@@ -1,5 +1,7 @@
 ## Problem Description
-Data source: [Kaggle Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/)
+
+## Dataset
+* [Kaggle Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/)
 
 ## EDA
 * Refer Jupyter Notebook.
@@ -12,15 +14,23 @@ Data source: [Kaggle Heart Failure Prediction Dataset](https://www.kaggle.com/da
 ## Model deployment
 
 ## Dependency and environment management
-### Environment Setup
+### [Optional] Create New Conda Virtual Environment 
 * `conda create -n ml-midterm-env` then `conda activate ml-midterm-env`
 * `conda install pip`
-* `pip install pipenv`
-* `pipenv install numpy scikit-learn seaborn jupyter notebook`
+
+### Create Virtual Environment using Pipenv
+* Make sure you have pipenv in your existing environment, if not, first execute `pip install pipenv`.
+* If you already installed pipenv, execute `pipenv install numpy scikit-learn seaborn jupyter notebook xgboost tqdm`.
+* If it's successful, you should see both `Pipfile` and `Pipfile.lock`.
+
 ### Activate virtual env
-* `pipenv shell`
+* To use the pipenv environment created from previous section , navigate to the project folder which contains `Pipfile` and `Pipfile.lock`, then execute `pipenv shell`.
 * Execute the following commands after `pipenv shell` for:
     * Open Jupyter Notebook: `jupyter notebook`
+
+## Containerization
+
+## Cloud Deployment
 
 ## Evaluation Criteria
 The project will be evaluated using these criteria:

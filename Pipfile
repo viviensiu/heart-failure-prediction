@@ -9,6 +9,8 @@ scikit-learn = "*"
 seaborn = "*"
 jupyter = "*"
 notebook = "*"
+xgboost = "*"
+tqdm = "*"
 
 [dev-packages]
 
