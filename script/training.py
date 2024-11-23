@@ -30,7 +30,7 @@ from xgboost import XGBClassifier
 
 file = "../data/heart.csv"
 seed = 11
-final_model = "../model/heart_disease_model.bin"
+final_model = "heart_disease_model.bin"
 
 def get_cholesterol_level(c):
     '''

@@ -4,15 +4,16 @@
 * [Kaggle Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/)
 
 ## EDA
-* Refer Jupyter Notebook [part_1_preprocessing.ipynb]()
+* Refer Jupyter Notebook [part_1_preprocessing.ipynb](https://github.com/viviensiu/heart-failure-prediction/blob/main/notebook/part_1_preprocessing.ipynb).
 
 ## Model training
-* Refer Jupyter Notebook [part_2_modeling.ipynb].
+* Refer Jupyter Notebook [part_2_modeling.ipynb](https://github.com/viviensiu/heart-failure-prediction/blob/main/notebook/part_2_modeling.ipynb).
 
 ## Exporting notebook to script
-* Refer script [training.py]
+* Refer script [training.py](https://github.com/viviensiu/heart-failure-prediction/blob/main/script/training.py).
 
 ## Model deployment
+* 
 
 ## Dependency and environment management
 ### [Optional] Create New Conda Virtual Environment 
