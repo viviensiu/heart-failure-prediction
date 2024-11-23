@@ -28,7 +28,7 @@ from sklearn.feature_extraction import DictVectorizer
 # Please follow the suggestions given in the error message and fix accordingly.
 from xgboost import XGBClassifier
 
-file = "../data/heart.csv"
+file = "./data/heart.csv"
 seed = 11
 final_model = "heart_disease_model.bin"
 
