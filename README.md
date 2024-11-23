@@ -4,12 +4,13 @@
 * [Kaggle Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/)
 
 ## EDA
-* Refer Jupyter Notebook.
+* Refer Jupyter Notebook [part_1_preprocessing.ipynb]()
 
 ## Model training
-* Refer Jupyter Notebook.
+* Refer Jupyter Notebook [part_2_modeling.ipynb].
 
 ## Exporting notebook to script
+* Refer script [training.py]
 
 ## Model deployment
 
@@ -20,7 +21,7 @@
 
 ### Create Virtual Environment using Pipenv
 * Make sure you have pipenv in your existing environment, if not, first execute `pip install pipenv`.
-* If you already installed pipenv, execute `pipenv install numpy scikit-learn seaborn jupyter notebook xgboost tqdm`.
+* If you already installed pipenv, execute `pipenv install numpy scikit-learn seaborn jupyter notebook xgboost streamlit`.
 * If it's successful, you should see both `Pipfile` and `Pipfile.lock`.
 
 ### Activate virtual env

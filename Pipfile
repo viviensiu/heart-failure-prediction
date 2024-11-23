@@ -10,7 +10,7 @@ seaborn = "*"
 jupyter = "*"
 notebook = "*"
 xgboost = "*"
-tqdm = "*"
+streamlit = "*"
 
 [dev-packages]
 
