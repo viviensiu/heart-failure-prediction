@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 
-model_file = '../model/heart_disease_model.bin'
+model_file = 'heart_disease_model.bin'
 
 with open(model_file, 'rb') as f_in:
     dv, model = pickle.load(f_in)
