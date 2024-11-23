@@ -1,5 +1,6 @@
 ## Problem Description
 > Cardiovascular diseases (CVD) are one of the leading cause of deaths worldwide. By examining the common risk factors, such as high blood cholestrol, chest pains, age risks and other factors featured in this dataset, a person's risk of having CVD could be detected earlier, thus reducing the number of deaths caused by CVD.
+
 > Using a Machine Learning approach, this project's goal is to help researchers in identifying the importance and correlations of each of the risk factors mentioned above using existing CVD medical records. A Machine Learning model trained on this dataset could be used to predict if a new patient is potentially at risk of having heart disease.
 
 ## Dataset
@@ -37,9 +38,11 @@ The following steps are for reproducing the results of this repo on your local w
 * If not, navigate to `heart_failure_prediction` in your command prompt/terminal, and execute `pipenv install numpy scikit-learn seaborn jupyter notebook xgboost streamlit`. If it's successful, you should see both `Pipfile` and `Pipfile.lock`.
 
 ### Activate virtual env
-* To use the pipenv environment created from previous section , navigate to `heart_failure_prediction` which contains `Pipfile` and `Pipfile.lock`, then execute `pipenv shell`.
-* Execute the following commands after `pipenv shell` for:
-    * Opening Jupyter Notebook: `jupyter notebook`.
+* To activate the pipenv environment defined in `Pipfile` and `Pipfile.lock`, in command prompt/terminal: 
+    * Navigate to `heart_failure_prediction`. 
+    * `pipenv shell`.
+* Execute the following commands after `pipenv shell` to:
+    * Open Jupyter Notebook: `jupyter notebook`.
     * Run `training.py` script: `python training.py`.
     * Run heart disease prediction app: `streamlit run heart_disease_prediction.py`.
 
