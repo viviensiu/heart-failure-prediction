@@ -25,9 +25,21 @@
 
 ## Model deployment
 * Model is deployed with two separate options: Flask and Streamlit.
-    * Flask:
-    * Streamlit: runs on local workstation and on Streamlit Cloud. Link is provided at [Cloud Deployment]().
-* Note that either one can be used for own convenience.
+    * Flask: runs on local workstation.
+    * Streamlit: runs on local workstation and on Streamlit Cloud (URL link is provided at [Cloud Deployment](#cloud-deployment)).
+* **Note**: either one can be used for own convenience.
+
+### Serve app using Flask
+* To serve the Flask prediction app:
+    * In command prompt/terminal, navigate to `heart_failure_prediction` folder.
+    * Execute `python predict_flask.py`. 
+    * If you see the message `* Serving Flask app 'heart_disease_app'`, the Flask app is ready for testing predictions.
+* To try out predictions, execute `predict_flask_test.py`. You should see something like this:
+```bash
+{'hasHeartDisease': True, 'hasHeartDisease_probability': 0.7287337183952332}
+Potentially at risk of heart disease. Follow-up examination recommended.
+```
+* To stop the Flask app, press CTRL+C in command prompt/terminal.    
 
 ## Dependency and environment management
 The following steps are for reproducing the results of this repo on your local workstation.
@@ -49,7 +61,7 @@ The following steps are for reproducing the results of this repo on your local w
 ### Create Virtual Environment using Pipenv
 * If you cloned this repo, `Pipfile` and `Pipfile.lock` should already be available in `heart_failure_prediction`. You can skip the following step.
 * If not, navigate to `heart_failure_prediction` in your command prompt/terminal: 
-    * Execute `pipenv install numpy scikit-learn seaborn jupyter notebook xgboost streamlit flask requests`. 
+    * Execute `pipenv install numpy scikit-learn seaborn jupyter notebook xgboost streamlit flask requests gunicorn`. 
     * If it's successful, you should see both `Pipfile` and `Pipfile.lock`.
 
 ### Activate virtual env
@@ -68,7 +80,6 @@ The following steps are for reproducing the results of this repo on your local w
 * The following steps are for those who are interested to replicate deployment to Streamlit Cloud:
     * Sign in to [Streamlit Cloud](https://streamlit.io/cloud) with Github account.
     * Follow the [instructions here](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app) to create a Streamlit app by specifying the Github repo, Streamlit app (for this repo, use [`heart_disease_prediction.py`](https://github.com/viviensiu/heart-failure-prediction/blob/main/heart_disease_prediction.py))  and provide a file for environment setup ([Pipfile](https://github.com/viviensiu/heart-failure-prediction/blob/main/Pipfile) was used here).
-    * 
 
 ## Evaluation Criteria
 The project will be evaluated using these criteria:
