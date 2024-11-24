@@ -23,6 +23,7 @@ The following steps are for reproducing the results of this repo on your local w
 * Alternatively you could use these options to clone this repo.
     * VSCode or 
     * Github Desktop
+* Once you have cloned this repo, create the virtual environment as in subsequent steps.
 
 ### [Optional] Install pip
 * Usually pip is included if you have installed python. To check this, execute `pip --version` in command prompt/terminal. If you could see a version, pip is installed.
@@ -32,39 +33,39 @@ The following steps are for reproducing the results of this repo on your local w
 * `pip install pipenv`
 
 ### Create Virtual Environment using Pipenv
-* If you cloned this repo, `Pipfile` and `Pipfile.lock` should already be available in `heart_failure_prediction`. You can skip the following step.
+* If you have cloned this repo, `Pipfile` and `Pipfile.lock` should already be available in `heart_failure_prediction` and you can skip the following step.
 * If not, navigate to `heart_failure_prediction` in your command prompt/terminal: 
     * Execute `pipenv install numpy scikit-learn seaborn jupyter notebook xgboost streamlit flask requests gunicorn`. 
-    * If it's successful, you should see both `Pipfile` and `Pipfile.lock`.
+    * If it's successful, you should see both `Pipfile` and `Pipfile.lock` inside this folder.
 
 ### Activate virtual env
 * To activate the pipenv environment defined in `Pipfile` and `Pipfile.lock`, in command prompt/terminal: 
     * Navigate to `heart_failure_prediction`. 
-    * `pipenv shell`.
+    * Run `pipenv shell`.
 * You can execute the following after `pipenv shell` to:
     * Open Jupyter Notebook: `jupyter notebook`.
-    * Run `training.py` script: `python training.py`.
+    * Run `training.py` script to recreate the model: `python training.py`.
     * Start the heart prediction Streamlit app: see [Run Heart Prediction app on Streamlit locally](#run-heart-prediction-app-on-streamlit-locally).
     * Serve the heart prediction Flask API call: see [Serve app using Flask](#serve-app-using-flask).
     * Run the heart prediction Docker container: see [Containerization](#containerization).
 
 ## EDA
-* Refer Jupyter Notebook [part_1_preprocessing.ipynb](https://github.com/viviensiu/heart-failure-prediction/blob/main/notebook/part_1_preprocessing.ipynb).
+* A detailed EDA on the dataset is provided in Jupyter Notebook [part_1_preprocessing.ipynb](https://github.com/viviensiu/heart-failure-prediction/blob/main/notebook/part_1_preprocessing.ipynb).
 
 ## Model training
 * The best classifier model is picked by evaluating `LogisticRegression`, `DecisionTreeClassifier`, `RandomForestClassifier` and `XGBClassifier` models.
 * Evaluation metrics: Confusion Matrix and AUC Scoring.
 * The final model is a finetuned `XGBClassifier`.
-* Refer Jupyter Notebook [part_2_modeling.ipynb](https://github.com/viviensiu/heart-failure-prediction/blob/main/notebook/part_2_modeling.ipynb).
+* Full explanation with visualization are found in Jupyter Notebook [part_2_modeling.ipynb](https://github.com/viviensiu/heart-failure-prediction/blob/main/notebook/part_2_modeling.ipynb).
 
 ## Exporting notebook to script
-* Refer script [training.py](https://github.com/viviensiu/heart-failure-prediction/blob/main/training.py).
+* The data cleaning, feature engineering, training and finetuning the final model are consolidated into script [training.py](https://github.com/viviensiu/heart-failure-prediction/blob/main/training.py).
 
 ## Model deployment
 * Model is deployed with multiple options to allow running on local workstation, via a container, or internet: 
-    * Flask: able to serve directly or via Docker (refer [Containerization](#containerization)).
+    * Flask: able to serve directly (see [here](#serve-app-using-flask)), or via Docker (refer [Containerization](#containerization)).
     * Streamlit: runs locally (see [here](#run-heart-prediction-app-on-streamlit-locally)) and on Streamlit Cloud (URL link is provided at [Cloud Deployment](#cloud-deployment)).
-* **Note**: Use any options as you wish. The most convenient and flexible option would be access Streamlit app via URL.
+* **Note**: Use any options as you wish. The **best option** would be access it online at [https://heart-vs.streamlit.app/](https://heart-vs.streamlit.app/).
 
 ### Serve app using Flask
 * To serve the Flask prediction app:
@@ -103,7 +104,7 @@ Potentially at risk of heart disease. Follow-up examination recommended.
     Potentially at risk of heart disease. Follow-up examination recommended.
     ```
     * Type `exit` to quite the bash terminal. 
-* To stop the running Docker container `heart_app`, execute `docker stop heart_app`
+* To stop the running Docker container `heart_app`, execute `docker stop heart_app`.
 
 ## Cloud Deployment
 * This prediction app is deployed to Streamlit Cloud, here's the url to try it: [https://heart-vs.streamlit.app/](https://heart-vs.streamlit.app/).
