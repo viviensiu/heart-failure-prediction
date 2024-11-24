@@ -5,7 +5,7 @@ from flask import request # Process incoming request via POST
 from flask import jsonify # Send back response in JSON format
 
 
-model_file = '../heart_disease_model.bin'
+model_file = 'heart_disease_model.bin'
 
 with open(model_file, 'rb') as f_in:
     dv, model = pickle.load(f_in)
@@ -24,7 +24,7 @@ def predict():
     y_pred = model.predict_proba(transformed)[:,1]
     hasHeartDisease = y_pred >= 0.5
     result = {
-        'hasHeartDisease_probability': float(y_pred),
+        'hasHeartDisease_probability': float(y_pred[0]),
         'hasHeartDisease': bool(hasHeartDisease)
     }
     return jsonify(result)
