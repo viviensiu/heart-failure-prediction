@@ -1,11 +1,12 @@
 ## Problem Description
 <p align="center">
     <!--img src="https://github.com/viviensiu/LLM-project/blob/main/image/problem.jpg" width=200 -->
-   <img src="https://github.com/viviensiu/heart-failure-prediction/blob/main/img/kenny-eliason-MEbT27ZrtdE-unsplash.jpg">
+   <img src="https://github.com/viviensiu/heart-failure-prediction/blob/main/img/kenny-eliason-MEbT27ZrtdE-unsplash.jpg" width=200px>
 </p>
 <p align="center">
    <em>Image credits: <a href="https://unsplash.com/@neonbrand">Kenny Eliason on Unsplash</a></em>
 </p>
+
 > Cardiovascular diseases (CVD) are one of the leading cause of deaths worldwide. By examining the common risk factors, such as high blood cholestrol, chest pains, age risks and other factors featured in this dataset, a person's risk of having CVD could be detected earlier, thus reducing the number of deaths caused by CVD.
 
 > Using a Machine Learning approach, this project's goal is to help researchers in identifying the importance and correlations of each of the risk factors mentioned above using existing CVD medical records. A Machine Learning model trained on this dataset could be used to predict if a new patient is potentially at risk of having heart disease.
