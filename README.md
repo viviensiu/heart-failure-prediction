@@ -1,4 +1,6 @@
 ## Problem Description
+![image of a heart model]()
+Image credits: [Kenny Eliason on Unsplash](https://unsplash.com/@neonbrand)
 > Cardiovascular diseases (CVD) are one of the leading cause of deaths worldwide. By examining the common risk factors, such as high blood cholestrol, chest pains, age risks and other factors featured in this dataset, a person's risk of having CVD could be detected earlier, thus reducing the number of deaths caused by CVD.
 
 > Using a Machine Learning approach, this project's goal is to help researchers in identifying the importance and correlations of each of the risk factors mentioned above using existing CVD medical records. A Machine Learning model trained on this dataset could be used to predict if a new patient is potentially at risk of having heart disease.
@@ -16,7 +18,10 @@
 * Refer script [training.py](https://github.com/viviensiu/heart-failure-prediction/blob/main/training.py).
 
 ## Model deployment
-* 
+* Model is deployed with two separate options: Flask and Streamlit.
+    * Flask:
+    * Streamlit: runs on local workstation and on Streamlit Cloud. Link is provided at [Cloud Deployment]().
+* Note that either one can be used for own convenience.
 
 ## Dependency and environment management
 The following steps are for reproducing the results of this repo on your local workstation.
@@ -24,7 +29,9 @@ The following steps are for reproducing the results of this repo on your local w
 ### Reproducing this repo
 * Create a new folder called `heart_failure_prediction` on your local workstation.
 * In command prompt/terminal, navigate to this new folder. Then clone this repo to this new folder using `git clone https://github.com/viviensiu/heart-failure-prediction.git`. 
-* Alternatively you could use VSCode or Github Desktop to clone this repo.
+* Alternatively you could use these options to clone this repo.
+    * VSCode or 
+    * Github Desktop
 
 ### [Optional] Install pip
 * Usually pip is included if you have installed python. To check this, execute `pip --version` in command prompt/terminal. If you could see a version, pip is installed.
@@ -49,11 +56,10 @@ The following steps are for reproducing the results of this repo on your local w
 ## Containerization
 
 ## Cloud Deployment
-* Already deployed to Streamlit Cloud, give it a try at [this link](https://heart-vs.streamlit.app/).
-* The following steps are for those who are interested to replicate deployment to Streamlit Cloud.
-* Instructions to deploy to Streamlit Cloud:
+* This prediction app is deployed to Streamlit Cloud, here's the url to try it: [https://heart-vs.streamlit.app/](https://heart-vs.streamlit.app/).
+* The following steps are for those who are interested to replicate deployment to Streamlit Cloud:
     * Sign in to [Streamlit Cloud](https://streamlit.io/cloud) with Github account.
-    * Follow the [instructions here](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app) to create a Streamlit app by specifying the Github repo, Streamlit app (for this repo, [`heart_disease_prediction.py`](https://github.com/viviensiu/heart-failure-prediction/blob/main/heart_disease_prediction.py)) was used) and provide a file for environment setup (for this repo, [Pipfile](https://github.com/viviensiu/heart-failure-prediction/blob/main/Pipfile) was used).
+    * Follow the [instructions here](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app) to create a Streamlit app by specifying the Github repo, Streamlit app (for this repo, use [`heart_disease_prediction.py`](https://github.com/viviensiu/heart-failure-prediction/blob/main/heart_disease_prediction.py))  and provide a file for environment setup ([Pipfile](https://github.com/viviensiu/heart-failure-prediction/blob/main/Pipfile) was used here).
     * 
 
 ## Evaluation Criteria
