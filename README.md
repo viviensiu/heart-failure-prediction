@@ -42,7 +42,9 @@ The following steps are for reproducing the results of this repo on your local w
 
 ### Create Virtual Environment using Pipenv
 * If you cloned this repo, `Pipfile` and `Pipfile.lock` should already be available in `heart_failure_prediction`. You can skip the following step.
-* If not, navigate to `heart_failure_prediction` in your command prompt/terminal, and execute `pipenv install numpy scikit-learn seaborn jupyter notebook xgboost streamlit`. If it's successful, you should see both `Pipfile` and `Pipfile.lock`.
+* If not, navigate to `heart_failure_prediction` in your command prompt/terminal: 
+    * Execute `pipenv install numpy scikit-learn seaborn jupyter notebook xgboost streamlit flask requests`. 
+    * If it's successful, you should see both `Pipfile` and `Pipfile.lock`.
 
 ### Activate virtual env
 * To activate the pipenv environment defined in `Pipfile` and `Pipfile.lock`, in command prompt/terminal: 

@@ -11,6 +11,8 @@ jupyter = "*"
 notebook = "*"
 xgboost = "*"
 streamlit = "*"
+flask = "*"
+requests = "*"
 
 [dev-packages]
 
