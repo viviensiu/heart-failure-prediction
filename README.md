@@ -126,3 +126,9 @@ The project will be evaluated using these criteria:
 * [Cloud deployment](#cloud-deployment)
 
 See ["Criteria and points award system"](https://docs.google.com/spreadsheets/d/e/2PACX-1vQCwqAtkjl07MTW-SxWUK9GUvMQ3Pv_fF8UadcuIYLgHa0PlNu9BRWtfLgivI8xSCncQs82HDwGXSm3/pubhtml) for project evaluation details.
+
+* For any questions regarding **peer review**, please reach out to me on DataTalks.Club Slack user "Vivien S.".
+* Alternatively, you can create a new issue under Issues.
+
+### Acknowledgements
+A big thanks to Alexey Grigorev and the [DataTalks.Club](https://github.com/DataTalksClub) for the ML Zoomcamp course, which made this project possible! 😃
