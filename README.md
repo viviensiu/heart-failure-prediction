@@ -25,7 +25,7 @@
 
 ## Model deployment
 * Model is deployed with two separate options: Flask and Streamlit.
-    * Flask: runs on local workstation.
+    * Flask: runs on local workstation and Docker.
     * Streamlit: runs on local workstation and on Streamlit Cloud (URL link is provided at [Cloud Deployment](#cloud-deployment)).
 * **Note**: either one can be used for own convenience.
 
@@ -40,6 +40,39 @@
 Potentially at risk of heart disease. Follow-up examination recommended.
 ```
 * To stop the Flask app, press CTRL+C in command prompt/terminal.    
+
+### Run Heart Prediction app on Streamlit locally
+* In command prompt/terminal: `streamlit run heart_disease_prediction.py`.
+* It should redirect you to a localhost page containing the Streamlit app automatically.
+
+## Containerization
+* The Flask app is also containerized using Docker.
+* **Prerequisites**: 
+    * Install Docker, see [Docker Installation](https://docs.docker.com/engine/install/).
+    * Make sure Docker service is up and running in local workstation.
+* In command prompt/terminal, run `docker build -t heart-prediction-app .`
+* Check that Docker image is created successfully: 
+    * `docker images`.
+    * You should see `heart-prediction-app` in the list of Docker Repositories.
+* Start a Docker container with the built image: `docker run -it -p 9696:9696 --rm --name heart_app heart-prediction-app:latest`. To check if the container is started:
+    * In a new command prompt/terminal, execute `docker ps`.
+    * You should see a running container with image `heart-prediction-app:latest` and name `heart_app`.
+* To test the served Flask app, you can use the Python script `predict_flask_test.py`. Steps: 
+    * Run `docker exec -it heart_app bash`. This opens a bash terminal inside the running container.
+    * Run `python predict_flask_test.py`.
+    * You should see: 
+    ```bash
+    {'hasHeartDisease': True, 'hasHeartDisease_probability': 0.7287337183952332}
+    Potentially at risk of heart disease. Follow-up examination recommended.
+    ```
+    * Type `exit` to quite the bash terminal. 
+* To stop the running Docker container `heart_app`, execute `docker stop heart_app`
+
+## Cloud Deployment
+* This prediction app is deployed to Streamlit Cloud, here's the url to try it: [https://heart-vs.streamlit.app/](https://heart-vs.streamlit.app/).
+* The following steps are for those who are interested to replicate deployment to Streamlit Cloud:
+    * Sign in to [Streamlit Cloud](https://streamlit.io/cloud) with Github account.
+    * Follow the [instructions here](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app) to create a Streamlit app by specifying the Github repo, Streamlit app (for this repo, use [`heart_disease_prediction.py`](https://github.com/viviensiu/heart-failure-prediction/blob/main/heart_disease_prediction.py))  and provide a file for environment setup ([Pipfile](https://github.com/viviensiu/heart-failure-prediction/blob/main/Pipfile) was used here).
 
 ## Dependency and environment management
 The following steps are for reproducing the results of this repo on your local workstation.
@@ -71,15 +104,9 @@ The following steps are for reproducing the results of this repo on your local w
 * Execute the following commands after `pipenv shell` to:
     * Open Jupyter Notebook: `jupyter notebook`.
     * Run `training.py` script: `python training.py`.
-    * Run heart disease prediction app: `streamlit run heart_disease_prediction.py`.
+    * Start the heart prediction Streamlit app: see [Run Heart Prediction app on Streamlit locally](#run-heart-prediction-app-on-streamlit-locally)
+    * Serve the heart prediction Flask API call: see [Serve app using Flask](#serve-app-using-flask).
 
-## Containerization
-
-## Cloud Deployment
-* This prediction app is deployed to Streamlit Cloud, here's the url to try it: [https://heart-vs.streamlit.app/](https://heart-vs.streamlit.app/).
-* The following steps are for those who are interested to replicate deployment to Streamlit Cloud:
-    * Sign in to [Streamlit Cloud](https://streamlit.io/cloud) with Github account.
-    * Follow the [instructions here](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app) to create a Streamlit app by specifying the Github repo, Streamlit app (for this repo, use [`heart_disease_prediction.py`](https://github.com/viviensiu/heart-failure-prediction/blob/main/heart_disease_prediction.py))  and provide a file for environment setup ([Pipfile](https://github.com/viviensiu/heart-failure-prediction/blob/main/Pipfile) was used here).
 
 ## Evaluation Criteria
 The project will be evaluated using these criteria:
